@@ -57,7 +57,7 @@ module AttributesAndTokenLists
     end
 
     def merge(other = {})
-      other = other.to_hash.with_indifferent_access
+      other = other.to_h.with_indifferent_access
 
       attributes = @attributes.merge(other) do |key|
         value, override = @attributes[key], other[key]
